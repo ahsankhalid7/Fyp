@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#1f5467</color>
+    <color name="colorPrimaryDark">#4f8095</color>
+    <color name="colorAccent">#002b3c</color>
+    <color name="primaryTextColor">#ffffff</color>
+    <!--<color name="colorPrimary">#008577</color>-->
+    <!--<color name="colorPrimaryDark">#00574B</color>-->
+    <!--<color name="colorAccent">#D81B60</color>-->
+    <color name="colorSplash">#ffffff</color>
+    <color name="error">#F32121</color>
+    <color name="editTextBG">#DADADA</color>
+    <color name="blackToggle">#000</color>
+</resources>

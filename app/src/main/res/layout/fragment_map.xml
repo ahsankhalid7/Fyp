@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MapFragment">
+
+
+
+    <RelativeLayout
+        android:id="@+id/relat"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".MapsActivity" />
+
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            android:id="@+id/searchBar"
+            style="@style/MaterialSearchBarLight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="62dp"
+            android:layout_marginRight="16dp"
+            android:elevation="5dp"
+            android:outlineProvider="bounds"
+            app:mt_hint="Search a place"
+            app:mt_maxSuggestionsCount="10"
+            app:mt_navIconEnabled="true"
+            app:mt_placeholder="Where to?"
+            app:mt_speechMode="false" />
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_cancel_request"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/searchBar"
+            android:layout_margin="16dp"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="Cancel Request"
+            android:visibility="gone"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <com.skyfishjy.library.RippleBackground
+            android:id="@+id/ripple_bg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:rb_color="#0099CC"
+            app:rb_duration="3000"
+            app:rb_radius="32dp"
+            app:rb_rippleAmount="4"
+            app:rb_scale="6">
+
+            <ImageView
+                android:id="@+id/location_pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_location_pin"
+                android:translationY="-18dp" />
+        </com.skyfishjy.library.RippleBackground>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_go"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="16dp"
+            android:background="@color/colorPrimary"
+            android:text="Search"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+        <Button
+            android:id="@+id/chatbutton"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="300dp"
+            android:layout_margin="16dp"
+            android:text="Chat"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+    <include layout="@layout/bottom_sheet"
+
+        android:visibility="visible"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:visibility="gone"
+        android:id="@+id/recyclerview"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
